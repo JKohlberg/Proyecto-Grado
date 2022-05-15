@@ -8,24 +8,22 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARInteractionManager : MonoBehaviour
 {
-    [SerializeField] private Camera ARCamera;
-    private ARRaycastManager ARRaycastManager;
+    [SerializeField] private Camera aRCamera;
+    private ARRaycastManager aRRaycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    private GameObject ARPointer;
+    private GameObject aRPointer;
+    private GameObject item3DModel;
+
     private bool InitialPostition;
     private bool OverUI;
     public GameObject Item3DModel
     {
-        get
-        {
-            return Item3DModel;
-        }
         set
         {
-            Item3DModel = value;
-            Item3DModel.transform.position = ARPointer.transform.position;
-            Item3DModel.transform.parent = ARPointer.transform;
+            item3DModel = value;
+            item3DModel.transform.position = aRPointer.transform.position;
+            item3DModel.transform.parent = aRPointer.transform;
             InitialPostition = true;
         }
     }
@@ -33,25 +31,25 @@ public class ARInteractionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ARPointer = transform.GetChild(0).gameObject;
-        ARRaycastManager = FindObjectOfType<ARRaycastManager>();
+        aRPointer = transform.GetChild(0).gameObject;
+        aRRaycastManager = FindObjectOfType<ARRaycastManager>();
         GameManager.instance.OnMainMenu += SetItemPosition;
     }
 
     private void SetItemPosition()
     {
-        if (Item3DModel != null)
+        if (item3DModel != null)
         {
-            Item3DModel.transform.parent = null;
-            ARPointer.SetActive(false);
-            Item3DModel = null;
+            item3DModel.transform.parent = null;
+            aRPointer.SetActive(false);
+            item3DModel = null;
         }
     }
 
     public void DeleteItem()
     {
-        Destroy(Item3DModel);
-        ARPointer.SetActive(false);
+        Destroy(item3DModel);
+        aRPointer.SetActive(false);
         GameManager.instance.MainMenu();
     }
 
@@ -61,12 +59,12 @@ public class ARInteractionManager : MonoBehaviour
         if (InitialPostition)
         {
             Vector2 middlePointScreen = new Vector2(Screen.width / 2, Screen.height / 2);
-            ARRaycastManager.Raycast(middlePointScreen, hits, TrackableType.Planes);
+            aRRaycastManager.Raycast(middlePointScreen, hits, TrackableType.Planes);
             if (hits.Count > 0)
             {
                 transform.position = hits[0].pose.position;
                 transform.rotation = hits[0].pose.rotation;
-                ARPointer.SetActive(true);
+                aRPointer.SetActive(true);
                 InitialPostition = false;
             }
         }
@@ -82,7 +80,7 @@ public class ARInteractionManager : MonoBehaviour
 
             if (touchOne.phase == TouchPhase.Moved)
             {
-                if (ARRaycastManager .Raycast(touchOne.position, hits, TrackableType.Planes))
+                if (aRRaycastManager.Raycast(touchOne.position, hits, TrackableType.Planes))
                 {
                     Pose hitPose = hits[0].pose;
                     if (!OverUI)

@@ -7,7 +7,7 @@ public class DataManager : MonoBehaviour
 {
     [SerializeField] private List<Item> items = new List<Item>();
     [SerializeField] private GameObject buttonContainer;
-    [SerializeField] private ItemButtonManager ItemButtonManager;
+    [SerializeField] private ItemButtonManager itemButtonManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class DataManager : MonoBehaviour
         foreach (var item in items)
         {
             ItemButtonManager itemButton;
-            itemButton = Instantiate(ItemButtonManager, buttonContainer.transform);
+            itemButton = Instantiate(itemButtonManager, buttonContainer.transform);
             itemButton.ItemName = item.ItemName;
             itemButton.ItemDescription = item.ItemDescription;
             itemButton.ItemImage = item.ItemImage;

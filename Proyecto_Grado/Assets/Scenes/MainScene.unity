@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309510032}
   m_HandleRect: {fileID: 309510031}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: c78b3493915b4ca4492b1618cd870bb6, type: 2}
   buttonContainer: {fileID: 1307658266}
-  ItemButtonManager: {fileID: 1515548307540359790, guid: 87e61d6eacdd439408ee4b7baf377f76, type: 3}
+  itemButtonManager: {fileID: 1515548307540359790, guid: 87e61d6eacdd439408ee4b7baf377f76, type: 3}
 --- !u!4 &949614426
 Transform:
   m_ObjectHideFlags: 0
@@ -1411,9 +1411,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1496.8452, y: -372.143}
+  m_AnchoredPosition: {x: -67843.336, y: 71683.55}
   m_SizeDelta: {x: 0, y: 440}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1307658268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa705dd7e804d0a48bfdc53a73ac5e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ARCamera: {fileID: 1114040581}
+  aRCamera: {fileID: 0}
 --- !u!4 &1333152312
 Transform:
   m_ObjectHideFlags: 0
@@ -1570,8 +1570,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 375, y: 170}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 225, y: 170}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481949359
 MonoBehaviour:
@@ -1959,8 +1959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -375, y: 170}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -225, y: 170}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773466929
 MonoBehaviour:
