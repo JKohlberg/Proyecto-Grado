@@ -15,4 +15,4 @@ MonoBehaviour:
   ItemName: Chair
   ItemImage: {fileID: 21300000, guid: a7eb888c42ba7e94a9e18f8b6bb33512, type: 3}
   ItemDescription: Office Chair
-  Item3DModel: {fileID: 8802050668194551420, guid: dde297bf9ae5cca459c09cd191e4e49f, type: 3}
+  Item3DModel: {fileID: 5819742184166276635, guid: eec17d11163638e4185065585a3fbefe, type: 3}
