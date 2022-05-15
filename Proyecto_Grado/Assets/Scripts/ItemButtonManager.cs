@@ -10,6 +10,7 @@ public class ItemButtonManager : MonoBehaviour
     public string ItemDescription { get; set; }
     public Sprite ItemImage { get; set; }
     public GameObject Item3DModel { get; set; }
+    public ARInteractionManager InteractionManager { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +22,13 @@ public class ItemButtonManager : MonoBehaviour
         var button = GetComponent<Button>();
         button.onClick.AddListener(GameManager.instance.ARPosition);
         button.onClick.AddListener(Create3DModel);
+
+        InteractionManager = FindObjectOfType<ARInteractionManager>();
     }
 
     private void Create3DModel()
     {
-        Instantiate(Item3DModel);
+        InteractionManager.Item3DModel = Instantiate(Item3DModel);
     }
 
     // Update is called once per frame
