@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
         Main_Menu_Canvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
 
         Items_Menu_Canvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Items_Menu_Canvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
         Items_Menu_Canvas.transform.GetChild(1).transform.DOMoveY(180, 0.3f);
 
         AR_Position_Canvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.3f);

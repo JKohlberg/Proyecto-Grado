@@ -46,9 +46,4 @@ public class GameManager : MonoBehaviour
         OnARPosition?.Invoke();
         Debug.Log("AR Position Activated");
     }
-
-    public void CloseApp()
-    {
-        Application.Quit();
-    }
 }
