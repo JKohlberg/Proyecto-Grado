@@ -116,6 +116,7 @@ public class ARInteractionManager : MonoBehaviour
             {
                 GameManager.instance.ARPosition();
                 item3DModel = itemSelected;
+                itemSelected = null;
                 aRPointer.SetActive(true);
                 transform.position = item3DModel.transform.position;
                 item3DModel.transform.parent = aRPointer.transform;
