@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6561258723548548827}
   m_Layer: 0
   m_Name: Office_Chair
-  m_TagString: item
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6368536, y: 0.99999994, z: 0.6010505}
-  m_Center: {x: 0.0025573522, y: 0.49612954, z: 0.010229468}
+  m_Size: {x: 0.71225667, y: 1.0653492, z: 0.6814804}
+  m_Center: {x: 0.000043913722, y: 0.49361604, z: 0.0001757741}
 --- !u!1001 &5171060682438448106
 PrefabInstance:
   m_ObjectHideFlags: 0

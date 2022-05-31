@@ -16,7 +16,7 @@ public class ARInteractionManager : MonoBehaviour
     private GameObject item3DModel;
     private GameObject itemSelected;
 
-    private bool InitialPostition;
+    private bool isInitialPostition;
     private bool isOverUI;
     private bool isOver3DModel;
 
@@ -28,7 +28,7 @@ public class ARInteractionManager : MonoBehaviour
             item3DModel = value;
             item3DModel.transform.position = aRPointer.transform.position;
             item3DModel.transform.parent = aRPointer.transform;
-            InitialPostition = true;
+            isInitialPostition = true;
         }
     }
 
@@ -40,27 +40,10 @@ public class ARInteractionManager : MonoBehaviour
         GameManager.instance.OnMainMenu += SetItemPosition;
     }
 
-    private void SetItemPosition()
-    {
-        if (item3DModel != null)
-        {
-            item3DModel.transform.parent = null;
-            aRPointer.SetActive(false);
-            item3DModel = null;
-        }
-    }
-
-    public void DeleteItem()
-    {
-        Destroy(item3DModel);
-        aRPointer.SetActive(false);
-        GameManager.instance.MainMenu();
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (InitialPostition)
+        if (isInitialPostition)
         {
             Vector2 middlePointScreen = new Vector2(Screen.width / 2, Screen.height / 2);
             aRRaycastManager.Raycast(middlePointScreen, hits, TrackableType.Planes);
@@ -69,7 +52,7 @@ public class ARInteractionManager : MonoBehaviour
                 transform.position = hits[0].pose.position;
                 transform.rotation = hits[0].pose.rotation;
                 aRPointer.SetActive(true);
-                InitialPostition = false;
+                isInitialPostition = false;
             }
         }
 
@@ -129,7 +112,7 @@ public class ARInteractionManager : MonoBehaviour
         Ray ray = aRCamera.ScreenPointToRay(touchPosition);
         if (Physics.Raycast(ray, out RaycastHit hit3DModel))
         {
-            if (hit3DModel.collider.CompareTag("item"))
+            if (hit3DModel.collider.CompareTag("Item"))
             {
                 itemSelected = hit3DModel.transform.gameObject;
                 return true;
@@ -149,4 +132,23 @@ public class ARInteractionManager : MonoBehaviour
 
         return result.Count > 0;
     }
+
+    private void SetItemPosition()
+    {
+        if (item3DModel != null)
+        {
+            item3DModel.transform.parent = null;
+            aRPointer.SetActive(false);
+            item3DModel = null;
+        }
+    }
+
+    public void DeleteItem()
+    {
+        Destroy(item3DModel);
+        aRPointer.SetActive(false);
+        GameManager.instance.MainMenu();
+    }
+
+
 }
