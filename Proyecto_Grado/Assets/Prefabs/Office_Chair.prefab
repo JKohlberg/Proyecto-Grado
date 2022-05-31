@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8556740901461858539
+--- !u!1 &2676159311772570503
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1704886813554974910}
-  - component: {fileID: 1481600806371187973}
+  - component: {fileID: 5328431573913737822}
+  - component: {fileID: 6561258723548548827}
   m_Layer: 0
   m_Name: Office_Chair
   m_TagString: item
@@ -17,40 +17,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1704886813554974910
+--- !u!4 &5328431573913737822
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556740901461858539}
+  m_GameObject: {fileID: 2676159311772570503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.435, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5378626267114539723}
+  - {fileID: 4632503305850254337}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1481600806371187973
+--- !u!65 &6561258723548548827
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556740901461858539}
+  m_GameObject: {fileID: 2676159311772570503}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6380656, y: 1.0050268, z: 0.6028776}
-  m_Center: {x: -0.000000014901161, y: 0.4951464, z: -0.0025134087}
---- !u!1001 &5561384147853765920
+  m_Size: {x: 0.6368536, y: 0.99999994, z: 0.6010505}
+  m_Center: {x: 0.0025573522, y: 0.49612954, z: 0.010229468}
+--- !u!1001 &5171060682438448106
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1704886813554974910}
+    m_TransformParent: {fileID: 5328431573913737822}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c2034d0d79a0be04281e784593f64906, type: 3}
       propertyPath: m_RootOrder
@@ -58,15 +58,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2034d0d79a0be04281e784593f64906, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0007853445
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2034d0d79a0be04281e784593f64906, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.496
+      value: 0.4950254
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2034d0d79a0be04281e784593f64906, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0023688078
+      value: 0.0077378117
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2034d0d79a0be04281e784593f64906, type: 3}
       propertyPath: m_LocalRotation.w
@@ -102,8 +102,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2034d0d79a0be04281e784593f64906, type: 3}
---- !u!4 &5378626267114539723 stripped
+--- !u!4 &4632503305850254337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c2034d0d79a0be04281e784593f64906, type: 3}
-  m_PrefabInstance: {fileID: 5561384147853765920}
+  m_PrefabInstance: {fileID: 5171060682438448106}
   m_PrefabAsset: {fileID: 0}

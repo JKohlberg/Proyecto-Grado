@@ -95,7 +95,7 @@ public class ARInteractionManager : MonoBehaviour
                 }
             }
 
-            if (Input.touchCount > 2)
+            if (Input.touchCount == 2)
             {
                 Touch touchTwo = Input.GetTouch(1);
                 if (touchOne.phase == TouchPhase.Began || touchTwo.phase == TouchPhase.Began)
